@@ -17,7 +17,6 @@ color:white;
 overflow:hidden;
 }
 
-/* Responsive Fix */
 .section{
 position:absolute;
 width:100%;
@@ -48,7 +47,7 @@ color:#ffb6c1;
 }
 
 p{
-max-width:900px;
+max-width:950px;
 line-height:1.9;
 font-size:clamp(16px,2.5vw,18px);
 margin-bottom:20px;
@@ -70,20 +69,17 @@ transform:scale(1.1);
 box-shadow:0 0 40px rgba(255,78,155,.9);
 }
 
-/* Floating Icons */
 .fall{
 position:absolute;
 top:-40px;
 font-size:26px;
 animation:fall 8s linear infinite;
 }
-
 @keyframes fall{
 0%{transform:translateY(-40px) rotate(0);}
 100%{transform:translateY(110vh) rotate(360deg);}
 }
 
-/* 3D Proposal Scene */
 .proposal{
 margin-top:30px;
 position:relative;
@@ -94,7 +90,6 @@ height:200px;
 font-size:60px;
 animation:ringPop 2s infinite alternate;
 }
-
 @keyframes ringPop{
 from{transform:scale(1);}
 to{transform:scale(1.2);}
@@ -107,13 +102,11 @@ position:absolute;
 left:60%;
 top:20%;
 }
-
 @keyframes roseSpin{
 from{transform:rotateY(0deg);}
 to{transform:rotateY(360deg);}
 }
 
-/* Smooth iframe GIF */
 .gif{
 width:320px;
 height:320px;
@@ -123,6 +116,19 @@ margin:20px 0;
 pointer-events:none;
 }
 
+.color{
+position:absolute;
+width:14px;
+height:14px;
+border-radius:50%;
+animation:burst 1.2s ease-out forwards;
+}
+@keyframes burst{
+to{
+transform:translate(var(--x),var(--y)) scale(4);
+opacity:0;
+}
+}
 </style>
 </head>
 <body>
@@ -133,7 +139,7 @@ pointer-events:none;
 <p>
 This space exists because you exist in my heart.  
 From the moment you came into my life, things started feeling warmer, calmer, more meaningful.  
-You are not just someone I admire — you are someone I respect deeply.  
+You are not just someone I admire  you are someone I respect deeply.  
 You changed my perspective, my patience, my understanding of love.  
 This is not just design. This is intention.
 </p>
@@ -155,19 +161,16 @@ You are rare, and I never want to take that for granted.
 <button onclick="nextPage(3)">Next</button>
 </div>
 
-<!-- PAGE 3 (FIXED DESTINY PAGE) -->
+<!-- PAGE 3 -->
 <div class="section" id="page3">
 <h1>Karmic Destiny ✨</h1>
 <p>
-25 December 2001 — You.  
-18 December 1999 — Me.  
-
+25 December 2001= You.  
+18 December 1999= Me.  
 Two December souls.  
 Two winter hearts.  
-
 Sometimes I truly believe that our connection was written long before we ever met.  
-Not coincidence — but destiny.  
-
+Not coincidence  but destiny.  
 Irmak, meeting you feels like something my soul was always searching for.
 </p>
 <iframe class="gif" src="https://giphy.com/embed/IC9nVITayD8Cb6uYP7"></iframe>
@@ -181,7 +184,6 @@ Irmak, meeting you feels like something my soul was always searching for.
 Golden warmth.  
 Playful energy.  
 Comforting presence.  
-
 You make ordinary days feel extraordinary.  
 That is a rare gift.
 </p>
@@ -189,8 +191,34 @@ That is a rare gift.
 <button onclick="nextPage(5)">Next</button>
 </div>
 
-<!-- PAGE 5 -->
+<!-- PAGE 5 HOLI -->
 <div class="section" id="page5">
+<h1>Happy Holi, My Love 🎨</h1>
+<p>
+Holi is about colors vibrant, fearless, joyful colors.  
+It is about celebration, laughter, and letting the world feel alive.  
+And the truth is…  
+you brought color into my life.  
+You turned simple moments into beautiful memories.  
+You turned silence into comfort.  
+You turned ordinary days into something worth remembering.  
+Even if this is your first Holi,  
+I want you to feel its spirit
+brightness, happiness, and connection.  
+May our bond always stay colorful.  
+May it stay strong.  
+May it stay joyful.
+</p>
+
+<iframe class="gif" src="https://giphy.com/embed/7qocQvpt0gk1JSWMV1"></iframe>
+
+<button onclick="playHoli()">Play Holi</button>
+
+<button onclick="nextPage(6)">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="section" id="page6">
 <h1>Love, Deep & Real ❤️</h1>
 <p>
 You are in my quiet thoughts.  
@@ -198,14 +226,15 @@ You are in my late night reflections.
 You are in my hopes for the future.  
 
 I do not rush what is meant to grow naturally.  
-I simply value what we have.
+I simply value what we have.  
+And I protect it with calm intention.
 </p>
 <iframe class="gif" src="https://giphy.com/embed/wvYNSqBAMDVx8CEYkt"></iframe>
-<button onclick="nextPage(6)">Final</button>
+<button onclick="nextPage(7)">Final</button>
 </div>
 
-<!-- PAGE 6 3D PROPOSAL STYLE -->
-<div class="section" id="page6">
+<!-- PAGE 7 PROPOSAL -->
+<div class="section" id="page7">
 <h1>Just A Moment… 🌹</h1>
 
 <div class="proposal">
@@ -229,7 +258,6 @@ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
 document.getElementById('page'+page).classList.add('active');
 }
 
-/* Floating strawberries & roses only */
 setInterval(()=>{
 let icons=["🌹","🍓"];
 let item=document.createElement("div");
@@ -239,6 +267,20 @@ item.style.left=Math.random()*100+"vw";
 document.body.appendChild(item);
 setTimeout(()=>item.remove(),8000);
 },1200);
+
+function playHoli(){
+for(let i=0;i<140;i++){
+let dot=document.createElement("div");
+dot.className="color";
+dot.style.background=`hsl(${Math.random()*360},100%,60%)`;
+dot.style.left="50%";
+dot.style.top="50%";
+dot.style.setProperty('--x',(Math.random()*700-350)+'px');
+dot.style.setProperty('--y',(Math.random()*700-350)+'px');
+document.body.appendChild(dot);
+setTimeout(()=>dot.remove(),1200);
+}
+}
 </script>
 
 </body>
