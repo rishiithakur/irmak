@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irmak ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0f0f1a;
+color:white;
+overflow:hidden;
+}
+
+/* Responsive Fix */
+.section{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+opacity:0;
+transform:translateY(30px);
+transition:1s ease;
+overflow-y:auto;
+}
+
+.active{
+opacity:1;
+transform:translateY(0);
+z-index:10;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:clamp(36px,6vw,60px);
+margin-bottom:20px;
+color:#ffb6c1;
+}
+
+p{
+max-width:900px;
+line-height:1.9;
+font-size:clamp(16px,2.5vw,18px);
+margin-bottom:20px;
+}
+
+button{
+padding:14px 35px;
+border:none;
+border-radius:40px;
+background:linear-gradient(45deg,#ff4e9b,#ff9068);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 20px rgba(255,78,155,.6);
+}
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px rgba(255,78,155,.9);
+}
+
+/* Floating Icons */
+.fall{
+position:absolute;
+top:-40px;
+font-size:26px;
+animation:fall 8s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-40px) rotate(0);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* 3D Proposal Scene */
+.proposal{
+margin-top:30px;
+position:relative;
+height:200px;
+}
+
+.ring{
+font-size:60px;
+animation:ringPop 2s infinite alternate;
+}
+
+@keyframes ringPop{
+from{transform:scale(1);}
+to{transform:scale(1.2);}
+}
+
+.rose3d{
+font-size:50px;
+animation:roseSpin 4s linear infinite;
+position:absolute;
+left:60%;
+top:20%;
+}
+
+@keyframes roseSpin{
+from{transform:rotateY(0deg);}
+to{transform:rotateY(360deg);}
+}
+
+/* Smooth iframe GIF */
+.gif{
+width:320px;
+height:320px;
+border:none;
+border-radius:20px;
+margin:20px 0;
+pointer-events:none;
+}
+
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="section active" id="page1">
+<h1>Welcome, Irmak 🌹</h1>
+<p>
+This space exists because you exist in my heart.  
+From the moment you came into my life, things started feeling warmer, calmer, more meaningful.  
+You are not just someone I admire — you are someone I respect deeply.  
+You changed my perspective, my patience, my understanding of love.  
+This is not just design. This is intention.
+</p>
+<iframe class="gif" src="https://giphy.com/embed/S2XiEJb2a1HYQ"></iframe>
+<button onclick="nextPage(2)">Continue</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="section" id="page2">
+<h1>My Beautiful River 🍓</h1>
+<p>
+Irmak, you feel like peace in human form.  
+You carry sweetness without trying.  
+You carry strength without showing off.  
+Every time you smile, something inside me relaxes.  
+You are rare, and I never want to take that for granted.
+</p>
+<iframe class="gif" src="https://giphy.com/embed/RPeh9zzA1IaTm"></iframe>
+<button onclick="nextPage(3)">Next</button>
+</div>
+
+<!-- PAGE 3 (FIXED DESTINY PAGE) -->
+<div class="section" id="page3">
+<h1>Karmic Destiny ✨</h1>
+<p>
+25 December 2001 — You.  
+18 December 1999 — Me.  
+
+Two December souls.  
+Two winter hearts.  
+
+Sometimes I truly believe that our connection was written long before we ever met.  
+Not coincidence — but destiny.  
+
+Irmak, meeting you feels like something my soul was always searching for.
+</p>
+<iframe class="gif" src="https://giphy.com/embed/IC9nVITayD8Cb6uYP7"></iframe>
+<button onclick="nextPage(4)">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="section" id="page4">
+<h1>Sweet Like Jalebi 🌀</h1>
+<p>
+Golden warmth.  
+Playful energy.  
+Comforting presence.  
+
+You make ordinary days feel extraordinary.  
+That is a rare gift.
+</p>
+<iframe class="gif" src="https://giphy.com/embed/XE6keaSppG6zZZzq3P"></iframe>
+<button onclick="nextPage(5)">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="section" id="page5">
+<h1>Love, Deep & Real ❤️</h1>
+<p>
+You are in my quiet thoughts.  
+You are in my late night reflections.  
+You are in my hopes for the future.  
+
+I do not rush what is meant to grow naturally.  
+I simply value what we have.
+</p>
+<iframe class="gif" src="https://giphy.com/embed/wvYNSqBAMDVx8CEYkt"></iframe>
+<button onclick="nextPage(6)">Final</button>
+</div>
+
+<!-- PAGE 6 3D PROPOSAL STYLE -->
+<div class="section" id="page6">
+<h1>Just A Moment… 🌹</h1>
+
+<div class="proposal">
+<div class="ring">💍</div>
+<div class="rose3d">🌹</div>
+</div>
+
+<p>
+No pressure.  
+No rush.  
+Just something beautiful.  
+Something patient.  
+Something real.
+</p>
+
+</div>
+
+<script>
+function nextPage(page){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById('page'+page).classList.add('active');
+}
+
+/* Floating strawberries & roses only */
+setInterval(()=>{
+let icons=["🌹","🍓"];
+let item=document.createElement("div");
+item.className="fall";
+item.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+item.style.left=Math.random()*100+"vw";
+document.body.appendChild(item);
+setTimeout(()=>item.remove(),8000);
+},1200);
+</script>
+
+</body>
+</html>
